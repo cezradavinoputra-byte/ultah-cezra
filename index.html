@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 19th Chapter — Cezra Davino Putra Prakoso</title>
-    <meta name="description" content="Undangan Digital Ulang Tahun ke-19 Cezra Davino Putra Prakoso • Minggu, 6 Desember 2026 • Kopikina Kemang">
-
+    <title>Cezra's 19th Birthday | Kopikina Kemang</title>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
+    
     <!-- Canvas Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
@@ -41,7 +40,7 @@
                     },
                     animation: {
                         'float-slow': 'floatSlow 7s ease-in-out infinite',
-                        'shimmer': 'shimmer 4s linear infinite',
+                        'shimmer': 'shimmer 3s linear infinite',
                     },
                     keyframes: {
                         floatSlow: {
@@ -59,6 +58,7 @@
     </script>
 
     <style>
+        /* Custom Scrollbar Monokrom & Emas */
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
@@ -71,19 +71,21 @@
             border-radius: 9999px;
         }
 
+        /* Glassmorphism Utilities */
         .glass-obsidian {
-            background: rgba(15, 22, 36, 0.78);
+            background: rgba(18, 18, 18, 0.78);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(197, 160, 89, 0.28);
+            border: 1px solid rgba(197, 160, 89, 0.25);
         }
         .glass-alabaster {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(15, 23, 42, 0.08);
         }
 
+        /* Cover Curtain Transition */
         .cover-curtain {
             transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.85s ease;
         }
@@ -93,6 +95,7 @@
             pointer-events: none;
         }
 
+        /* Subtle Gold Foil Text */
         .gold-foil-text {
             background: linear-gradient(90deg, #C5A059 0%, #F3E5AB 50%, #C5A059 100%);
             background-size: 200% auto;
@@ -104,63 +107,67 @@
 </head>
 <body class="bg-alabaster text-obsidian font-sans antialiased selection:bg-champagne selection:text-obsidian overflow-hidden">
 
-    <!-- Toast Notification Container -->
+    <!-- Toast Notification Container (Pengganti alert) -->
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 max-w-xs w-full pointer-events-none px-4 sm:px-0"></div>
 
     <!-- =========================================================
          1. HALAMAN SAMPUL (COVER) INTERAKTIF FULLSCREEN
          ========================================================= -->
-    <section id="cover-screen" class="fixed inset-0 z-40 bg-gradient-to-b from-obsidian via-navyDeep to-obsidian text-pure flex flex-col justify-between items-center p-6 sm:p-10 cover-curtain overflow-y-auto">
-        <canvas id="cover-particles" class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
-
+    <section id="cover-screen" class="fixed inset-0 z-40 bg-obsidian text-pure flex flex-col justify-between items-center p-6 sm:p-10 cover-curtain overflow-y-auto">
+        <!-- Ambient Monochrome & Thin Gold Frame -->
+        <canvas id="cover-particles" class="absolute inset-0 w-full h-full pointer-events-none opacity-60"></canvas>
         <div class="absolute inset-4 sm:inset-7 border border-champagne/25 rounded-3xl pointer-events-none"></div>
         <div class="absolute -top-32 -left-32 w-80 h-80 bg-champagne/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-navyRich/50 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
 
+        <!-- Top Monogram Header -->
         <div class="relative z-10 text-center mt-4 sm:mt-6">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-champagne/35 bg-obsidian/70 text-champagneLight text-[11px] tracking-[0.28em] uppercase font-medium">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-champagne"></i> Exclusive Birthday Invitation
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-champagne/35 bg-charcoal/80 text-champagneLight text-[11px] tracking-[0.28em] uppercase font-medium">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-champagne"></i> Private Soirée
             </span>
         </div>
 
-        <div class="relative z-10 text-center max-w-xl mx-auto my-auto py-8">
-            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full border border-champagne/45 bg-obsidian/85 mb-6 shadow-2xl animate-float-slow">
+        <!-- Center Content -->
+        <div class="relative z-10 text-center max-w-lg mx-auto my-auto py-8">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full border border-champagne/40 bg-charcoal/90 mb-6 shadow-2xl animate-float-slow">
                 <span class="font-serif text-3xl font-bold gold-foil-text">19</span>
             </div>
 
-            <p class="text-champagneLight uppercase tracking-[0.32em] text-[11px] sm:text-xs font-semibold mb-2.5">
-                The 19th Chapter
+            <p class="text-slate-400 uppercase tracking-[0.32em] text-[11px] sm:text-xs font-medium mb-3">
+                You Are Cordially Invited To
             </p>
-            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-pure leading-tight mb-3">
-                Cezra Davino<br>
-                <span class="italic font-normal text-champagne">Putra Prakoso</span>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-pure leading-tight mb-3">
+                Cezra’s <span class="italic font-normal text-champagne">19th</span> Birthday
             </h1>
-            <p class="text-slate-300 text-xs sm:text-sm font-light tracking-widest uppercase mb-8">
-                Birthday Celebration &amp; Dinner Soirée
+            <p class="text-slate-300 text-sm sm:text-base font-light tracking-widest uppercase mb-8">
+                Cezra Davino Putra Prakoso
             </p>
 
+            <!-- Personalized Guest Card -->
             <div class="glass-obsidian rounded-2xl p-5 sm:p-6 mb-8 max-w-sm mx-auto shadow-2xl">
-                <p class="text-[11px] text-slate-300 uppercase tracking-[0.22em] mb-1.5">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <p class="text-[11px] text-slate-400 uppercase tracking-[0.22em] mb-1.5">Kepada Yth. Tamu Undangan:</p>
                 <h2 id="cover-guest-name" class="font-serif text-2xl sm:text-3xl text-pure font-semibold tracking-wide">
                     Tamu Spesial
                 </h2>
                 <div class="mt-2.5 flex items-center justify-center gap-2">
-                    <span class="h-[1px] w-6 bg-champagne/45"></span>
+                    <span class="h-[1px] w-6 bg-champagne/40"></span>
                     <span id="cover-guest-badge" class="text-[10px] uppercase tracking-[0.25em] text-champagneLight font-semibold">
                         VIP Guest List
                     </span>
-                    <span class="h-[1px] w-6 bg-champagne/45"></span>
+                    <span class="h-[1px] w-6 bg-champagne/40"></span>
                 </div>
             </div>
 
-            <button id="btn-open-invitation" onclick="openInvitation()" class="group relative inline-flex items-center gap-3 px-9 py-4 rounded-full bg-pure text-obsidian font-semibold text-sm sm:text-base tracking-wide border border-champagne/50 shadow-xl shadow-black/50 hover:bg-champagne hover:text-obsidian transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
+            <!-- Open Invitation Button -->
+            <button id="btn-open-invitation" onclick="openInvitation()" class="group relative inline-flex items-center gap-3 px-9 py-4 rounded-full bg-pure text-obsidian font-semibold text-sm sm:text-base tracking-wide border border-champagne/40 shadow-xl shadow-black/50 hover:bg-champagne hover:text-obsidian transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer">
                 <i data-lucide="mail-open" class="w-4 h-4 transition-transform group-hover:-rotate-12"></i>
                 <span>Buka Undangan</span>
             </button>
         </div>
 
+        <!-- Bottom Event Summary -->
         <div class="relative z-10 text-center mb-3">
-            <p class="text-[11px] text-slate-300 tracking-[0.22em] uppercase">
+            <p class="text-[11px] text-slate-400 tracking-[0.22em] uppercase">
                 Minggu, 6 Desember 2026 &bull; Kopikina Kemang
             </p>
         </div>
@@ -171,44 +178,44 @@
          ========================================================= -->
     <main id="main-invitation" class="min-h-screen">
 
-        <!-- 2. STICKY TOP NAVIGATION -->
+        <!-- Sticky Top Navigation -->
         <header class="sticky top-0 z-30 glass-alabaster transition-all">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                 <a href="#hero-section" class="flex items-center gap-2.5">
-                    <span class="w-9 h-9 rounded-full bg-navyDeep text-champagne font-serif font-bold flex items-center justify-center text-sm border border-champagne/40">19</span>
-                    <span class="font-serif font-bold text-obsidian text-base sm:text-lg tracking-tight">The 19th Chapter<span class="text-champagne">.</span></span>
+                    <span class="w-9 h-9 rounded-full bg-obsidian text-champagne font-serif font-bold flex items-center justify-center text-sm border border-champagne/30">19</span>
+                    <span class="font-serif font-bold text-obsidian text-lg tracking-tight">Cezra<span class="text-champagne">.</span></span>
                 </a>
 
                 <nav class="hidden md:flex items-center gap-7 text-xs uppercase tracking-widest font-semibold text-slate-600">
-                    <a href="#event-section" class="hover:text-navyDeep transition-colors">Detail Acara</a>
-                    <a href="#rsvp-section" class="hover:text-navyDeep transition-colors">Daftar Tamu &amp; RSVP</a>
-                    <button onclick="openShareModal()" class="px-4 py-2 rounded-full bg-navyDeep text-pure hover:bg-champagne hover:text-obsidian transition-colors flex items-center gap-1.5 cursor-pointer">
-                        <i data-lucide="share-2" class="w-3.5 h-3.5 text-champagne"></i>
-                        <span>Bagikan Link</span>
+                    <a href="#event-section" class="hover:text-obsidian transition-colors">Acara</a>
+                    <a href="#dresscode-section" class="hover:text-obsidian transition-colors">Dress Code</a>
+                    <a href="#rsvp-section" class="hover:text-obsidian transition-colors">Tamu & RSVP</a>
+                    <button onclick="toggleShareModal(true)" class="hover:text-champagne transition-colors flex items-center gap-1.5 cursor-pointer">
+                        <i data-lucide="share-2" class="w-3.5 h-3.5 text-champagne"></i> Bagikan Link
                     </button>
                 </nav>
 
-                <div class="flex items-center gap-2 md:hidden">
-                    <button onclick="openShareModal()" class="px-3.5 py-2 rounded-full bg-navyDeep text-pure text-xs font-semibold flex items-center gap-1.5 hover:bg-champagne hover:text-obsidian transition-colors cursor-pointer">
-                        <i data-lucide="share-2" class="w-3.5 h-3.5 text-champagne"></i>
-                        <span>Bagikan Link</span>
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleShareModal(true)" class="md:hidden p-2.5 rounded-full border border-slate-200 bg-pure text-obsidian hover:border-champagne transition-colors" title="Bagikan Undangan Personal">
+                        <i data-lucide="share-2" class="w-4 h-4"></i>
                     </button>
-                    <a href="#rsvp-section" class="px-3.5 py-2 rounded-full bg-obsidian text-pure text-xs font-semibold tracking-wider uppercase hover:bg-champagne hover:text-obsidian transition-colors">
+                    <a href="#rsvp-section" class="px-4 py-2 rounded-full bg-obsidian text-pure text-xs font-semibold tracking-wider uppercase hover:bg-champagne hover:text-obsidian transition-colors">
                         RSVP
                     </a>
                 </div>
             </div>
         </header>
 
-        <!-- HERO & COUNTDOWN REAL-TIME -->
-        <section id="hero-section" class="relative bg-gradient-to-b from-obsidian via-navyDeep to-obsidian text-pure pt-16 pb-28 sm:pt-24 sm:pb-36 px-4 sm:px-6 overflow-hidden">
+        <!-- HERO & COUNTDOWN SECTION -->
+        <section id="hero-section" class="relative bg-obsidian text-pure pt-16 pb-28 sm:pt-24 sm:pb-36 px-4 sm:px-6 overflow-hidden">
+            <!-- Subtle geometric border & radial glow -->
             <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[640px] h-[300px] bg-champagne/10 rounded-full blur-3xl"></div>
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-champagne/10 rounded-full blur-3xl"></div>
             </div>
 
             <div class="relative z-10 max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-obsidian/70 border border-champagne/35 text-champagneLight text-[11px] uppercase tracking-[0.28em] mb-6">
-                    <span>The 19th Chapter</span>
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-charcoal border border-champagne/30 text-champagneLight text-[11px] uppercase tracking-[0.28em] mb-6">
+                    <span>Celebrating Nineteen Years</span>
                 </div>
 
                 <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-pure tracking-tight leading-tight mb-4">
@@ -217,36 +224,37 @@
                 </h1>
 
                 <p class="max-w-xl mx-auto text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-12">
-                    Dengan penuh rasa syukur dan kebahagiaan, saya mengundang Anda untuk hadir merayakan langkah baru di usia ke-19 dalam malam penuh kebersamaan dan kehangatan.
+                    Merupakan suatu kehormatan dan kebahagiaan apabila Anda berkenan hadir untuk berbagi tawa, cerita, dan doa dalam perayaan ulang tahun ke-19 saya.
                 </p>
 
+                <!-- 3. COUNTDOWN TIMER REAL-TIME -->
                 <div class="max-w-2xl mx-auto">
                     <div class="flex items-center justify-center gap-3 mb-5">
-                        <span class="h-[1px] w-8 bg-champagne/45"></span>
-                        <p class="text-[11px] uppercase tracking-[0.28em] text-champagneLight font-semibold">Menuju Hari Perayaan</p>
-                        <span class="h-[1px] w-8 bg-champagne/45"></span>
+                        <span class="h-[1px] w-8 bg-champagne/40"></span>
+                        <p class="text-[11px] uppercase tracking-[0.28em] text-champagneLight font-semibold">Hitung Mundur Acara</p>
+                        <span class="h-[1px] w-8 bg-champagne/40"></span>
                     </div>
 
                     <div class="grid grid-cols-4 gap-3 sm:gap-5">
                         <div class="glass-obsidian rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center">
                             <span id="cd-days" class="font-serif text-3xl sm:text-5xl font-bold text-pure">00</span>
-                            <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-slate-300 mt-2">Hari</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-slate-400 mt-2">Hari</span>
                         </div>
                         <div class="glass-obsidian rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center">
                             <span id="cd-hours" class="font-serif text-3xl sm:text-5xl font-bold text-pure">00</span>
-                            <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-slate-300 mt-2">Jam</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-slate-400 mt-2">Jam</span>
                         </div>
                         <div class="glass-obsidian rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center">
                             <span id="cd-minutes" class="font-serif text-3xl sm:text-5xl font-bold text-pure">00</span>
-                            <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-slate-300 mt-2">Menit</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-slate-400 mt-2">Menit</span>
                         </div>
-                        <div class="glass-obsidian rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center border-champagne/45">
+                        <div class="glass-obsidian rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center border-champagne/40">
                             <span id="cd-seconds" class="font-serif text-3xl sm:text-5xl font-bold text-champagne">00</span>
                             <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-champagneLight mt-2">Detik</span>
                         </div>
                     </div>
 
-                    <p id="cd-caption" class="text-xs text-slate-300 mt-5 tracking-wider">
+                    <p id="cd-caption" class="text-xs text-slate-400 mt-5 tracking-wider">
                         Minggu, 6 Desember 2026 &bull; Pukul 19.00 WIB – Selesai
                     </p>
                 </div>
@@ -254,53 +262,56 @@
         </section>
 
         <!-- =========================================================
-             3. DETAIL ACARA & PANDUAN DRESS CODE (NAVY & NOIR)
+             DETAIL ACARA & PANDUAN DRESS CODE MONOKROM
              ========================================================= -->
         <section id="event-section" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto -mt-14 relative z-20">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-
+                
                 <!-- KARTU WAKTU & LOKASI -->
                 <div class="bg-pure rounded-3xl p-7 sm:p-9 shadow-xl shadow-slate-200/70 border border-slate-200/80 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 rounded-2xl bg-navyDeep text-champagne flex items-center justify-center border border-champagne/35">
+                            <div class="w-12 h-12 rounded-2xl bg-obsidian text-champagne flex items-center justify-center border border-champagne/30">
                                 <i data-lucide="calendar-check" class="w-5 h-5"></i>
                             </div>
-                            <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">Detail Acara</span>
+                            <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-400">The Details</span>
                         </div>
 
-                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-obsidian mb-6">Waktu &amp; Lokasi</h2>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-obsidian mb-6">Waktu & Tempat</h2>
 
                         <div class="space-y-6">
+                            <!-- Hari & Tanggal -->
                             <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-alabaster border border-slate-200 text-navyDeep flex items-center justify-center shrink-0 mt-0.5">
+                                <div class="w-10 h-10 rounded-xl bg-alabaster border border-slate-200 text-obsidian flex items-center justify-center shrink-0 mt-0.5">
                                     <i data-lucide="calendar" class="w-4 h-4"></i>
                                 </div>
                                 <div>
-                                    <p class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold">Hari / Tanggal</p>
+                                    <p class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold">Hari & Tanggal</p>
                                     <p class="font-semibold text-obsidian text-base sm:text-lg mt-0.5">Minggu, 6 Desember 2026</p>
                                 </div>
                             </div>
 
+                            <!-- Waktu -->
                             <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-alabaster border border-slate-200 text-navyDeep flex items-center justify-center shrink-0 mt-0.5">
+                                <div class="w-10 h-10 rounded-xl bg-alabaster border border-slate-200 text-obsidian flex items-center justify-center shrink-0 mt-0.5">
                                     <i data-lucide="clock" class="w-4 h-4"></i>
                                 </div>
                                 <div>
-                                    <p class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold">Waktu</p>
-                                    <p class="font-semibold text-obsidian text-base sm:text-lg mt-0.5">19.00 WIB – Selesai</p>
+                                    <p class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold">Waktu Acara</p>
+                                    <p class="font-semibold text-obsidian text-base sm:text-lg mt-0.5">Pukul 19.00 WIB – Selesai</p>
                                 </div>
                             </div>
 
+                            <!-- Lokasi -->
                             <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-alabaster border border-slate-200 text-navyDeep flex items-center justify-center shrink-0 mt-0.5">
+                                <div class="w-10 h-10 rounded-xl bg-alabaster border border-slate-200 text-obsidian flex items-center justify-center shrink-0 mt-0.5">
                                     <i data-lucide="map-pin" class="w-4 h-4"></i>
                                 </div>
                                 <div>
-                                    <p class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold">Lokasi</p>
+                                    <p class="text-[11px] uppercase tracking-widest text-slate-400 font-semibold">Venue</p>
                                     <p class="font-semibold text-obsidian text-base sm:text-lg mt-0.5">Kopikina Kemang</p>
                                     <p class="text-sm text-slate-500 mt-1 leading-relaxed">
-                                        Kopikina Kemang, Jakarta Selatan
+                                        Jl. Kemang Raya, Bangka, Kec. Mampang Prapatan, Kota Jakarta Selatan
                                     </p>
                                 </div>
                             </div>
@@ -308,72 +319,68 @@
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-slate-100">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Kopikina+Kemang+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-navyDeep text-pure font-semibold text-sm tracking-wide hover:bg-champagne hover:text-obsidian transition-all duration-300 shadow-md">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kopikina+Kemang+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-obsidian text-pure font-semibold text-sm tracking-wide hover:bg-champagne hover:text-obsidian transition-all duration-300 shadow-md">
                             <i data-lucide="navigation" class="w-4 h-4"></i>
-                            <span>Buka di Google Maps</span>
+                            <span>Petunjuk Arah Google Maps</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- KARTU PANDUAN DRESS CODE: BAJU NAVY & CELANA HITAM -->
+                <!-- KARTU PANDUAN DRESS CODE MONOKROM -->
                 <div id="dresscode-section" class="bg-obsidian text-pure rounded-3xl p-7 sm:p-9 shadow-xl border border-champagne/30 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute -right-14 -bottom-14 w-56 h-56 rounded-full bg-navyRich/50 blur-3xl pointer-events-none"></div>
+                    <div class="absolute -right-14 -bottom-14 w-52 h-52 rounded-full bg-champagne/10 blur-3xl pointer-events-none"></div>
 
                     <div>
                         <div class="flex items-center justify-between mb-6">
-                            <div class="w-12 h-12 rounded-2xl bg-navyDeep border border-champagne/35 text-champagne flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-2xl bg-charcoal border border-champagne/35 text-champagne flex items-center justify-center">
                                 <i data-lucide="shirt" class="w-5 h-5"></i>
                             </div>
                             <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-champagneLight">Dress Code</span>
                         </div>
 
-                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-pure mb-2">Baju Navy &amp; Celana Hitam</h2>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-pure mb-2">Navy &amp; Noir Elegance</h2>
                         <p class="text-slate-300 text-sm leading-relaxed mb-6 font-light">
-                            Untuk keselarasan suasana malam perayaan, para tamu dimohon mengenakan paduan busana bernuansa <strong class="text-pure font-medium">Navy &amp; Noir</strong> berikut:
+                            Selaraskan momen kebersamaan malam ini dengan mengenakan paduan busana bernuansa gelap yang berkelas berikut:
                         </p>
 
+                        <!-- Visual Swatch Baju Navy & Celana Hitam -->
                         <div class="grid grid-cols-2 gap-3.5 mb-6">
+                            <!-- Swatch Atasan: Baju Navy -->
                             <div class="bg-navyDeep text-pure rounded-2xl p-4 border border-blue-900/70 shadow-inner flex flex-col items-center text-center">
-                                <div class="w-12 h-12 rounded-full bg-navyRich border-2 border-champagne/50 shadow-sm flex items-center justify-center mb-3">
-                                    <span class="w-6 h-6 rounded-full bg-[#0F1E36] border border-blue-300/30"></span>
+                                <div class="w-12 h-12 rounded-full bg-navyRich border-2 border-champagne/45 shadow-sm flex items-center justify-center mb-3">
+                                    <span class="w-6 h-6 rounded-full bg-[#0F1E36] border border-blue-400/30"></span>
                                 </div>
-                                <span class="text-[10px] uppercase tracking-[0.2em] text-champagneLight font-bold">Atasan</span>
+                                <span class="text-[10px] uppercase tracking-[0.2em] text-champagneLight font-bold">Top / Atasan</span>
                                 <p class="font-serif font-bold text-base sm:text-lg text-pure mt-0.5">Baju Navy</p>
                                 <span class="text-[11px] text-slate-300 font-mono mt-1">Biru Dongker &bull; #0F1E36</span>
                             </div>
 
+                            <!-- Swatch Bawahan: Celana Hitam -->
                             <div class="bg-charcoal text-pure rounded-2xl p-4 border border-slate-700/80 shadow-inner flex flex-col items-center text-center">
                                 <div class="w-12 h-12 rounded-full bg-obsidian border-2 border-slate-700 shadow-sm flex items-center justify-center mb-3">
                                     <span class="w-6 h-6 rounded-full bg-black border border-slate-600"></span>
                                 </div>
-                                <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">Bawahan</span>
+                                <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">Bottom / Bawahan</span>
                                 <p class="font-serif font-bold text-base sm:text-lg text-pure mt-0.5">Celana Hitam</p>
-                                <span class="text-[11px] text-slate-400 font-mono mt-1">Noir Black &bull; #0A0A0A</span>
+                                <span class="text-[11px] text-slate-400 font-mono mt-1">Obsidian &bull; #0A0A0A</span>
                             </div>
                         </div>
 
+                        <!-- Palette Bar -->
                         <div class="bg-charcoal/90 border border-slate-800 rounded-2xl p-3.5 flex items-center justify-between">
-                            <span class="text-xs text-slate-300 font-medium">Palet Warna Tema:</span>
-                            <div class="flex items-center gap-2.5">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="w-5 h-5 rounded-full bg-[#0F1E36] border border-blue-400/40" title="Navy (#0F1E36)"></span>
-                                    <span class="text-[10px] text-slate-400 font-mono hidden sm:inline">#0F1E36</span>
-                                </div>
-                                <div class="flex items-center gap-1.5">
-                                    <span class="w-5 h-5 rounded-full bg-[#0A0A0A] border border-slate-600" title="Hitam (#0A0A0A)"></span>
-                                    <span class="text-[10px] text-slate-400 font-mono hidden sm:inline">#0A0A0A</span>
-                                </div>
-                                <div class="flex items-center gap-1.5">
-                                    <span class="w-5 h-5 rounded-full bg-[#C5A059] border border-champagneLight/60" title="Aksen Emas (#C5A059)"></span>
-                                    <span class="text-[10px] text-champagneLight font-mono hidden sm:inline">#C5A059</span>
-                                </div>
+                            <span class="text-xs text-slate-300 font-medium">Palet Warna Resmi:</span>
+                            <div class="flex items-center gap-2">
+                                <span class="w-5 h-5 rounded-full bg-[#0F1E36] border border-blue-400/40" title="Deep Navy (#0F1E36)"></span>
+                                <span class="w-5 h-5 rounded-full bg-[#14284B] border border-blue-400/40" title="Midnight Navy (#14284B)"></span>
+                                <span class="w-5 h-5 rounded-full bg-obsidian border border-slate-600" title="Obsidian Black (#0A0A0A)"></span>
+                                <span class="w-5 h-5 rounded-full bg-champagne border border-champagneLight/50" title="Champagne Gold Accent"></span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-start gap-3 text-xs text-slate-300 leading-relaxed">
-                        <i data-lucide="sparkles" class="w-4 h-4 text-champagne shrink-0 mt-0.5"></i>
-                        <span>Panduan: Kemeja navy, polo/kaos biru dongker rapi, atau blouse navy dipadukan dengan celana panjang/bahan berwarna hitam (Smart Casual).</span>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-3 text-xs text-slate-300">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-champagne shrink-0"></i>
+                        <span>Smart casual / semi-formal: kemeja navy, polo/kaos biru dongker rapi, atau blouse navy dipadukan dengan celana hitam.</span>
                     </div>
                 </div>
 
@@ -381,23 +388,24 @@
         </section>
 
         <!-- =========================================================
-             4 & 5. DAFTAR TAMU VIP (32 TAMU), RSVP & PAPAN UCAPAN
+             4 & 5. DAFTAR TAMU VIP, PENCARIAN, RSVP & PAPAN UCAPAN
              ========================================================= -->
-        <section id="rsvp-section" class="py-16 sm:py-24 px-4 sm:px-6 bg-pure border-t border-slate-200/80">
+        <section id="rsvp-section" class="py-16 sm:py-24 px-4 sm:px-6 bg-pure border-y border-slate-200/80">
             <div class="max-w-5xl mx-auto">
-
+                
+                <!-- Header Section -->
                 <div class="text-center max-w-2xl mx-auto mb-12">
-                    <span class="text-[11px] font-bold uppercase tracking-[0.28em] text-champagne">VIP Guest List &amp; RSVP</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-obsidian mt-2 mb-3">Daftar Tamu &amp; Konfirmasi Kehadiran</h2>
+                    <span class="text-[11px] font-bold uppercase tracking-[0.28em] text-champagne">VIP Guest List & RSVP</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-obsidian mt-2 mb-3">Konfirmasi Kehadiran & Ucapan</h2>
                     <p class="text-slate-500 text-sm sm:text-base font-light">
-                        Cari nama Anda di daftar tamu VIP, bagikan tautan personal, serta kirimkan konfirmasi kehadiran dan ucapan untuk Cezra.
+                        Temukan nama Anda dalam daftar tamu undangan di bawah ini, konfirmasi kehadiran Anda, dan tinggalkan pesan terbaik untuk ulang tahun ke-19 Cezra.
                     </p>
                 </div>
 
                 <!-- Statistik Kehadiran Real-Time -->
                 <div class="grid grid-cols-3 gap-3 sm:gap-5 max-w-xl mx-auto mb-12">
                     <div class="bg-alabaster rounded-2xl p-4 sm:p-5 text-center border border-slate-200/80">
-                        <p id="stat-total" class="font-serif text-2xl sm:text-3xl font-bold text-navyDeep">32</p>
+                        <p id="stat-total" class="font-serif text-2xl sm:text-3xl font-bold text-obsidian">32</p>
                         <p class="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest mt-1 font-medium">Total Tamu</p>
                     </div>
                     <div class="bg-alabaster rounded-2xl p-4 sm:p-5 text-center border border-emerald-200">
@@ -410,124 +418,150 @@
                     </div>
                 </div>
 
+                <!-- Grid 2 Kolom: Daftar Tamu VIP (Kiri) & Form RSVP (Kanan) -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-                    <!-- KOLOM KIRI: DAFTAR TAMU VIP & PENCARIAN -->
+                    
+                    <!-- KOLOM KIRI: DAFTAR TAMU VIP & PENCARIAN (7 Cols) -->
                     <div class="lg:col-span-7 bg-alabaster rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
                             <h3 class="font-serif text-xl font-bold text-obsidian flex items-center gap-2">
-                                <i data-lucide="users" class="w-5 h-5 text-navyDeep"></i>
+                                <i data-lucide="users" class="w-5 h-5 text-champagne"></i>
                                 <span>Daftar Tamu VIP</span>
                             </h3>
-                            <div class="relative w-full sm:w-64">
+                            <!-- Search Box -->
+                            <div class="relative w-full sm:w-60">
                                 <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
-                                <input type="text" id="guest-search-input" oninput="renderGuestDirectory()" placeholder="Cari nama tamu..." class="w-full pl-10 pr-4 py-2 rounded-xl bg-pure border border-slate-200 text-sm text-obsidian placeholder-slate-400 focus:outline-none focus:border-navyDeep transition-colors">
+                                <input type="text" id="guest-search-input" oninput="renderGuestDirectory()" placeholder="Cari nama tamu..." class="w-full pl-10 pr-4 py-2 rounded-xl bg-pure border border-slate-200 text-sm text-obsidian placeholder-slate-400 focus:outline-none focus:border-obsidian transition-colors">
                             </div>
                         </div>
 
+                        <!-- Category Filter Pills -->
                         <div class="flex items-center justify-between flex-wrap gap-2 mb-6">
-                            <div class="flex items-center flex-wrap gap-2">
-                                <button onclick="setGuestCategory('Semua')" id="filter-Semua" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-navyDeep text-pure transition-all cursor-pointer">
+                            <div class="flex items-center gap-2">
+                                <button onclick="setGuestCategory('Semua')" id="filter-Semua" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-obsidian text-pure transition-all cursor-pointer">
                                     Semua (32)
                                 </button>
-                                <button onclick="setGuestCategory('Friends')" id="filter-Friends" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-pure text-slate-600 border border-slate-200 hover:border-navyDeep transition-all cursor-pointer">
+                                <button onclick="setGuestCategory('Friends')" id="filter-Friends" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-pure text-slate-600 border border-slate-200 hover:border-obsidian transition-all cursor-pointer">
                                     Friends (25)
                                 </button>
-                                <button onclick="setGuestCategory('Family')" id="filter-Family" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-pure text-slate-600 border border-slate-200 hover:border-navyDeep transition-all cursor-pointer">
+                                <button onclick="setGuestCategory('Family')" id="filter-Family" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-pure text-slate-600 border border-slate-200 hover:border-obsidian transition-all cursor-pointer">
                                     Family (7)
                                 </button>
                             </div>
+                            <button onclick="toggleShareModal(true)" class="text-xs font-semibold text-champagne hover:text-obsidian flex items-center gap-1 transition-colors cursor-pointer">
+                                <i data-lucide="link" class="w-3.5 h-3.5"></i> Generator Link
+                            </button>
                         </div>
 
-                        <div id="guest-directory-list" class="space-y-6 max-h-[540px] overflow-y-auto pr-1"></div>
+                        <!-- Guest Directory List -->
+                        <div id="guest-directory-list" class="space-y-6 max-h-[470px] overflow-y-auto pr-1">
+                            <!-- Diisi otomatis oleh JavaScript -->
+                        </div>
                     </div>
 
-                    <!-- KOLOM KANAN: FORM RSVP & UCAPAN -->
-                    <div class="lg:col-span-5 bg-gradient-to-b from-navyDeep to-obsidian text-pure rounded-3xl p-6 sm:p-8 shadow-xl border border-champagne/30 sticky top-24">
-                        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-champagneLight">RSVP &amp; Wishes</span>
-                        <h3 class="font-serif text-2xl font-bold text-pure mt-1 mb-5">Konfirmasi &amp; Ucapan</h3>
+                    <!-- KOLOM KANAN: FORM RSVP & UCAPAN (5 Cols) -->
+                    <div class="lg:col-span-5 bg-obsidian text-pure rounded-3xl p-6 sm:p-8 shadow-xl border border-champagne/30 sticky top-24">
+                        <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-champagneLight">RSVP Form</span>
+                        <h3 class="font-serif text-2xl font-bold text-pure mt-1 mb-5">Konfirmasi & Doa</h3>
 
                         <form id="rsvp-form" onsubmit="handleRSVPSubmit(event)" class="space-y-4">
+                            <!-- Pilih Nama Tamu -->
                             <div>
-                                <label for="rsvp-guest-select" class="block text-[11px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5">Pilih Nama Tamu</label>
-                                <select id="rsvp-guest-select" required class="w-full px-4 py-3 rounded-xl bg-obsidian/80 border border-slate-700 text-pure text-sm focus:outline-none focus:border-champagne transition-colors">
-                                    <option value="" disabled selected>-- Pilih nama dari daftar VIP --</option>
-                                    <option value="__CUSTOM__">+ Isi Nama Lainnya...</option>
+                                <label for="rsvp-guest-select" class="block text-[11px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5">Nama Tamu</label>
+                                <select id="rsvp-guest-select" required class="w-full px-4 py-3 rounded-xl bg-charcoal border border-slate-700 text-pure text-sm focus:outline-none focus:border-champagne transition-colors">
+                                    <option value="" disabled selected>-- Pilih nama Anda dari daftar --</option>
                                 </select>
                             </div>
 
-                            <div id="custom-name-wrapper" class="hidden">
-                                <label for="rsvp-custom-name" class="block text-[11px] font-semibold text-champagneLight uppercase tracking-widest mb-1.5">Tulis Nama Lengkap Anda</label>
-                                <input type="text" id="rsvp-custom-name" placeholder="Masukkan nama Anda..." class="w-full px-4 py-2.5 rounded-xl bg-obsidian/80 border border-slate-700 text-pure text-sm placeholder-slate-500 focus:outline-none focus:border-champagne transition-colors">
-                            </div>
-
+                            <!-- Pilihan Status Kehadiran -->
                             <div>
-                                <span class="block text-[11px] font-semibold text-slate-300 uppercase tracking-widest mb-2">Status Kehadiran</span>
+                                <label class="block text-[11px] font-semibold text-slate-300 uppercase tracking-widest mb-2">Konfirmasi Kehadiran</label>
                                 <div class="grid grid-cols-2 gap-3">
                                     <label class="cursor-pointer">
-                                        <input type="radio" name="rsvp_status" value="Hadir" checked class="peer sr-only">
-                                        <div class="py-2.5 px-3 rounded-xl border border-slate-700 bg-obsidian/60 text-slate-300 peer-checked:bg-emerald-600 peer-checked:text-pure peer-checked:border-emerald-500 text-center text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-1.5">
-                                            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
-                                            <span>Hadir</span>
+                                        <input type="radio" name="rsvp_status" value="Hadir" class="peer sr-only" checked required>
+                                        <div class="p-3 rounded-xl border border-slate-700 bg-charcoal text-center text-sm font-medium text-slate-300 peer-checked:border-emerald-400 peer-checked:bg-emerald-950/60 peer-checked:text-emerald-300 transition-all flex items-center justify-center gap-2">
+                                            <i data-lucide="check-circle-2" class="w-4 h-4"></i> Hadir
                                         </div>
                                     </label>
                                     <label class="cursor-pointer">
-                                        <input type="radio" name="rsvp_status" value="Tidak Hadir" class="peer sr-only">
-                                        <div class="py-2.5 px-3 rounded-xl border border-slate-700 bg-obsidian/60 text-slate-300 peer-checked:bg-rose-600 peer-checked:text-pure peer-checked:border-rose-500 text-center text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-1.5">
-                                            <i data-lucide="x-circle" class="w-4 h-4"></i>
-                                            <span>Tidak Hadir</span>
+                                        <input type="radio" name="rsvp_status" value="Tidak Hadir" class="peer sr-only" required>
+                                        <div class="p-3 rounded-xl border border-slate-700 bg-charcoal text-center text-sm font-medium text-slate-300 peer-checked:border-rose-400 peer-checked:bg-rose-950/60 peer-checked:text-rose-300 transition-all flex items-center justify-center gap-2">
+                                            <i data-lucide="x-circle" class="w-4 h-4"></i> Tidak Hadir
                                         </div>
                                     </label>
                                 </div>
                             </div>
 
+                            <!-- Pesan / Ucapan -->
                             <div>
-                                <label for="rsvp-message" class="block text-[11px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5">Ucapan &amp; Doa untuk Cezra</label>
-                                <textarea id="rsvp-message" rows="3" placeholder="Tuliskan ucapan hangat atau doa terbaik Anda..." class="w-full px-4 py-3 rounded-xl bg-obsidian/80 border border-slate-700 text-pure text-sm placeholder-slate-500 focus:outline-none focus:border-champagne transition-colors resize-none"></textarea>
+                                <label for="rsvp-message" class="block text-[11px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5">Ucapan & Doa untuk Cezra</label>
+                                <textarea id="rsvp-message" rows="3" required placeholder="Tuliskan ucapan selamat ulang tahun ke-19 dan doa terbaik Anda..." class="w-full px-4 py-3 rounded-xl bg-charcoal border border-slate-700 text-pure text-sm placeholder-slate-500 focus:outline-none focus:border-champagne transition-colors resize-none"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-champagne text-obsidian font-bold text-sm tracking-wide hover:bg-champagneLight transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-pure text-obsidian font-bold text-sm tracking-wide hover:bg-champagne hover:text-obsidian transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer">
                                 <i data-lucide="send" class="w-4 h-4"></i>
-                                <span>Kirim Konfirmasi &amp; Ucapan</span>
+                                <span>Kirim RSVP & Ucapan</span>
                             </button>
                         </form>
                     </div>
 
                 </div>
 
-                <!-- PAPAN UCAPAN TAMU -->
+                <!-- PAPAN UCAPAN (WISHES WALL) -->
                 <div class="mt-16 pt-12 border-t border-slate-200/80">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-8">
+                    <div class="flex items-center justify-between mb-7">
                         <div>
-                            <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-champagne">Guestbook</span>
-                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-obsidian mt-1">Papan Ucapan</h3>
+                            <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-champagne">Wishes & Prayers</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-obsidian mt-0.5">Papan Ucapan Tamu</h3>
                         </div>
-                        <span id="wishes-count-badge" class="text-xs font-semibold text-slate-500 bg-alabaster px-3.5 py-1.5 rounded-full border border-slate-200 self-start sm:self-auto">
+                        <span id="wishes-counter" class="px-3.5 py-1.5 rounded-full bg-obsidian text-champagneLight text-xs font-semibold">
                             0 Ucapan
                         </span>
                     </div>
 
-                    <div id="wishes-wall" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+                    <div id="wishes-feed" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+                        <!-- Diisi otomatis oleh JavaScript -->
+                    </div>
                 </div>
 
             </div>
         </section>
 
         <!-- =========================================================
-             6. FOOTER MINIMALIS MONOKROM & NAVY
+             6. SECTION GENERATOR LINK UNDANGAN PERSONAL (INLINE)
              ========================================================= -->
-        <footer class="bg-obsidian text-pure py-14 px-4 sm:px-6 border-t border-slate-800/80">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-champagne/40 bg-navyDeep text-champagne font-serif font-bold text-base mb-4">
-                    19
+        <section id="generator-section" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+            <div class="bg-alabaster rounded-3xl p-7 sm:p-10 border border-slate-200 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-6 border-b border-slate-200">
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-champagne">Share Helper</span>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-obsidian mt-1">Generator Link Undangan Personal</h2>
+                        <p class="text-slate-500 text-sm mt-1 max-w-xl">
+                            Salin tautan khusus (<code class="text-xs bg-pure px-1.5 py-0.5 rounded border border-slate-200 text-obsidian">?to=NamaTamu</code>) atau kirim langsung via WhatsApp untuk masing-masing dari 32 tamu undangan.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-64 relative">
+                        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                        <input type="text" id="share-search-inline" oninput="renderShareGrid('share-grid-inline', 'share-search-inline')" placeholder="Cari nama tamu..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-pure border border-slate-200 text-sm focus:outline-none focus:border-obsidian">
+                    </div>
                 </div>
-                <h4 class="font-serif text-2xl font-bold text-pure">Cezra Davino Putra Prakoso</h4>
-                <p class="text-xs sm:text-sm text-slate-400 mt-2 tracking-wide">
-                    Minggu, 6 Desember 2026 &bull; Kopikina Kemang &bull; Dress Code: Baju Navy &amp; Celana Hitam
+
+                <div id="share-grid-inline" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 max-h-[420px] overflow-y-auto pr-1">
+                    <!-- Diisi otomatis oleh JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-obsidian text-slate-400 py-14 px-4 text-center border-t border-champagne/20">
+            <div class="max-w-xl mx-auto">
+                <span class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-champagne/40 text-champagne font-serif font-bold text-base mb-4">19</span>
+                <h3 class="font-serif text-xl sm:text-2xl text-pure font-semibold mb-1.5">Cezra Davino Putra Prakoso</h3>
+                <p class="text-xs uppercase tracking-[0.25em] text-champagneLight mb-6">
+                    Minggu, 6 Desember 2026 &bull; 19.00 WIB &bull; Kopikina Kemang
                 </p>
-                <div class="h-[1px] w-24 bg-champagne/30 mx-auto my-6"></div>
-                <p class="text-[11px] text-slate-500 uppercase tracking-[0.25em]">
-                    The 19th Chapter &copy; 2026 &bull; Crafted with Warmth
+                <p class="text-xs text-slate-500">
+                    Dress Code: Baju Navy (Biru Dongker) &amp; Celana Hitam
                 </p>
             </div>
         </footer>
@@ -535,208 +569,150 @@
     </main>
 
     <!-- =========================================================
-         MODAL GENERATOR LINK UNDANGAN PERSONAL
+         MODAL GENERATOR LINK UNDANGAN PERSONAL (QUICK ACCESS)
          ========================================================= -->
-    <div id="share-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
-        <div class="bg-pure text-obsidian rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-slate-200 relative">
-            <button onclick="closeShareModal()" class="w-9 h-9 rounded-full bg-alabaster hover:bg-slate-200 text-slate-600 flex items-center justify-center absolute top-5 right-5 transition-colors cursor-pointer" aria-label="Tutup modal">
-                <i data-lucide="x" class="w-4 h-4"></i>
-            </button>
-
-            <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-champagne">Personal Link Generator</span>
-            <h3 class="font-serif text-2xl font-bold text-obsidian mt-1 mb-2">Bagikan Undangan</h3>
-            <p class="text-xs sm:text-sm text-slate-500 mb-5">
-                Pilih nama tamu VIP untuk membuat tautan undangan personal dengan sapaan khusus di halaman sampul.
-            </p>
-
-            <div class="space-y-4">
+    <div id="share-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-obsidian/80 backdrop-blur-sm">
+        <div class="bg-pure rounded-3xl max-w-3xl w-full max-h-[88vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between bg-alabaster">
                 <div>
-                    <label for="modal-guest-select" class="block text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-1.5">Nama Tamu</label>
-                    <select id="modal-guest-select" onchange="updateModalLinkPreview()" class="w-full px-4 py-2.5 rounded-xl bg-alabaster border border-slate-200 text-sm font-medium text-obsidian focus:outline-none focus:border-navyDeep">
-                        <!-- Diisi otomatis -->
-                    </select>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-champagne">Personal Invitation Links</span>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-obsidian">Kirim Undangan Personal (32 Tamu)</h3>
                 </div>
+                <button onclick="toggleShareModal(false)" class="w-9 h-9 rounded-full bg-pure border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-obsidian hover:text-pure transition-colors cursor-pointer">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
 
-                <div>
-                    <label for="modal-link-preview" class="block text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-1.5">Tautan Personal</label>
-                    <div class="flex items-center gap-2">
-                        <input type="text" id="modal-link-preview" readonly class="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 focus:outline-none">
-                        <button onclick="copyModalLink()" class="px-4 py-2.5 rounded-xl bg-navyDeep text-pure hover:bg-champagne hover:text-obsidian text-xs font-semibold transition-colors shrink-0 flex items-center gap-1.5 cursor-pointer">
-                            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                            <span>Salin</span>
-                        </button>
-                    </div>
+            <!-- Modal Search -->
+            <div class="p-4 sm:px-6 border-b border-slate-100 bg-pure">
+                <div class="relative">
+                    <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                    <input type="text" id="share-search-modal" oninput="renderShareGrid('share-grid-modal', 'share-search-modal')" placeholder="Ketik nama tamu (contoh: Ari, Mba eca, Mas calvin)..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-alabaster border border-slate-200 text-sm focus:outline-none focus:border-obsidian">
                 </div>
+            </div>
 
-                <div class="pt-2">
-                    <button onclick="shareModalWhatsApp()" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-pure font-semibold text-sm transition-colors flex items-center justify-center gap-2 shadow-md cursor-pointer">
-                        <i data-lucide="message-circle" class="w-4 h-4"></i>
-                        <span>Kirim via WhatsApp</span>
-                    </button>
-                </div>
+            <!-- Modal List -->
+            <div id="share-grid-modal" class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-2 gap-3 overflow-y-auto">
+                <!-- Diisi otomatis oleh JavaScript -->
             </div>
         </div>
     </div>
 
+    <!-- =========================================================
+         JAVASCRIPT APPLICATION LOGIC
+         ========================================================= -->
     <script>
+        // 1. DAFTAR TAMU VIP (25 FRIENDS + 7 FAMILY = 32 TAMU)
         const VIP_GUESTS = [
-            // FRIENDS (25)
-            { id: 'f-1', name: 'Ari', category: 'Friends' },
-            { id: 'f-2', name: 'Aldi', category: 'Friends' },
-            { id: 'f-3', name: 'Rasya', category: 'Friends' },
-            { id: 'f-4', name: 'Keja', category: 'Friends' },
-            { id: 'f-5', name: 'Ocol', category: 'Friends' },
-            { id: 'f-6', name: 'Zildan', category: 'Friends' },
-            { id: 'f-7', name: 'Aqil', category: 'Friends' },
-            { id: 'f-8', name: 'Paras', category: 'Friends' },
-            { id: 'f-9', name: 'Papeng', category: 'Friends' },
-            { id: 'f-10', name: 'Sabian', category: 'Friends' },
-            { id: 'f-11', name: 'Alpin', category: 'Friends' },
-            { id: 'f-12', name: 'Ano', category: 'Friends' },
-            { id: 'f-13', name: 'Langit', category: 'Friends' },
-            { id: 'f-14', name: 'Kia', category: 'Friends' },
-            { id: 'f-15', name: 'Fahri', category: 'Friends' },
-            { id: 'f-16', name: 'Billy', category: 'Friends' },
-            { id: 'f-17', name: 'Darelly', category: 'Friends' },
-            { id: 'f-18', name: 'Malik', category: 'Friends' },
-            { id: 'f-19', name: 'Mahen', category: 'Friends' },
-            { id: 'f-20', name: 'Apip', category: 'Friends' },
-            { id: 'f-21', name: 'Samil', category: 'Friends' },
-            { id: 'f-22', name: 'Bombom', category: 'Friends' },
-            { id: 'f-23', name: 'Robby', category: 'Friends' },
-            { id: 'f-24', name: 'Khasia', category: 'Friends' },
-            { id: 'f-25', name: 'Zara', category: 'Friends' },
-
-            // FAMILY (7)
-            { id: 'fam-1', name: 'Mba eca', category: 'Family' },
-            { id: 'fam-2', name: 'Mas calvin', category: 'Family' },
-            { id: 'fam-3', name: 'Mba sheila', category: 'Family' },
-            { id: 'fam-4', name: 'Tante mer', category: 'Family' },
-            { id: 'fam-5', name: 'Khaira', category: 'Family' },
-            { id: 'fam-6', name: 'Yoda', category: 'Family' },
-            { id: 'fam-7', name: 'Tante maisy', category: 'Family' }
+            // FRIENDS
+            { name: 'Ari', category: 'Friends' },
+            { name: 'Aldi', category: 'Friends' },
+            { name: 'Rasya', category: 'Friends' },
+            { name: 'Keja', category: 'Friends' },
+            { name: 'Ocol', category: 'Friends' },
+            { name: 'Zildan', category: 'Friends' },
+            { name: 'Aqil', category: 'Friends' },
+            { name: 'Paras', category: 'Friends' },
+            { name: 'Papeng', category: 'Friends' },
+            { name: 'Sabian', category: 'Friends' },
+            { name: 'Alpin', category: 'Friends' },
+            { name: 'Ano', category: 'Friends' },
+            { name: 'Langit', category: 'Friends' },
+            { name: 'Kia', category: 'Friends' },
+            { name: 'Fahri', category: 'Friends' },
+            { name: 'Billy', category: 'Friends' },
+            { name: 'Darelly', category: 'Friends' },
+            { name: 'Malik', category: 'Friends' },
+            { name: 'Mahen', category: 'Friends' },
+            { name: 'Apip', category: 'Friends' },
+            { name: 'Samil', category: 'Friends' },
+            { name: 'Bombom', category: 'Friends' },
+            { name: 'Robby', category: 'Friends' },
+            { name: 'Khasia', category: 'Friends' },
+            { name: 'Zara', category: 'Friends' },
+            // FAMILY
+            { name: 'Mba eca', category: 'Family' },
+            { name: 'Mas calvin', category: 'Family' },
+            { name: 'Mba sheila', category: 'Family' },
+            { name: 'Tante mer', category: 'Family' },
+            { name: 'Khaira', category: 'Family' },
+            { name: 'Yoda', category: 'Family' },
+            { name: 'Tante maisy', category: 'Family' }
         ];
 
-        const STORAGE_RSVP_KEY = 'cezra_19th_rsvp_v1';
-        const STORAGE_WISHES_KEY = 'cezra_19th_wishes_v1';
+        const STORAGE_KEY = 'cezra_19th_birthday_rsvp_v2';
+        let activeCategory = 'Semua';
+        let rsvpStore = {};
 
-        let currentCategory = 'Semua';
-        let rsvpData = {};
-        let wishesData = [];
+        // Data awal contoh ucapan jika localStorage masih kosong
+        const INITIAL_WISHES = {
+            'Mas calvin': {
+                name: 'Mas calvin',
+                category: 'Family',
+                status: 'Hadir',
+                message: 'Selamat ulang tahun ke-19 Cezra! Semoga makin dewasa, sehat selalu, dan semua cita-citanya tercapai. Sampai ketemu di Kopikina Kemang!',
+                createdAt: '2026-11-24T09:15:00.000Z'
+            },
+            'Ari': {
+                name: 'Ari',
+                category: 'Friends',
+                status: 'Hadir',
+                message: 'Happy 19th birthday bro Cezra! Panjang umur, lancar terus kuliah dan urusannya. Siap dress code putih hitam!',
+                createdAt: '2026-11-24T10:00:00.000Z'
+            }
+        };
 
-        function loadSavedData() {
+        // Load & Save localStorage
+        function loadStore() {
             try {
-                const savedRsvp = localStorage.getItem(STORAGE_RSVP_KEY);
-                if (savedRsvp) rsvpData = JSON.parse(savedRsvp);
-            } catch (e) { rsvpData = {}; }
-
-            try {
-                const savedWishes = localStorage.getItem(STORAGE_WISHES_KEY);
-                if (savedWishes) {
-                    wishesData = JSON.parse(savedWishes);
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (raw) {
+                    rsvpStore = JSON.parse(raw);
                 } else {
-                    wishesData = [
-                        {
-                            id: 'init-1',
-                            name: 'Mba eca',
-                            category: 'Family',
-                            status: 'Hadir',
-                            message: 'Selamat ulang tahun ke-19 Cezra! Semoga makin sukses, sehat selalu, dan tercapai semua cita-citanya.',
-                            time: 'Baru saja'
-                        },
-                        {
-                            id: 'init-2',
-                            name: 'Ari',
-                            category: 'Friends',
-                            status: 'Hadir',
-                            message: 'Happy 19th birthday bro! Sampai ketemu di Kopikina Kemang, siap-siap pakai baju navy & celana hitam!',
-                            time: 'Baru saja'
-                        }
-                    ];
-                    localStorage.setItem(STORAGE_WISHES_KEY, JSON.stringify(wishesData));
+                    rsvpStore = { ...INITIAL_WISHES };
+                    saveStore();
                 }
-            } catch (e) { wishesData = []; }
+            } catch (err) {
+                rsvpStore = { ...INITIAL_WISHES };
+            }
         }
 
-        function showToast(message, type = 'success') {
-            const container = document.getElementById('toast-container');
-            const toast = document.createElement('div');
-            const bgClass = type === 'success'
-                ? 'bg-navyDeep text-pure border-champagne/50'
-                : 'bg-charcoal text-pure border-rose-500/50';
+        function saveStore() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(rsvpStore));
+            } catch (err) {
+                console.error('Storage error:', err);
+            }
+        }
 
-            toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-2xl border shadow-2xl text-xs sm:text-sm font-medium transition-all duration-300 ${bgClass}`;
-            toast.innerHTML = `
-                <i data-lucide="${type === 'success' ? 'check-circle-2' : 'alert-circle'}" class="w-4 h-4 text-champagne shrink-0"></i>
-                <span>${message}</span>
+        // Toast Notification (Pengganti alert)
+        function showToast(text, isError = false) {
+            const container = document.getElementById('toast-container');
+            const el = document.createElement('div');
+            const styleClass = isError
+                ? 'bg-rose-950 border-rose-500 text-pure'
+                : 'bg-obsidian border-champagne text-pure';
+
+            el.className = `pointer-events-auto flex items-center gap-3 px-4 py-3.5 rounded-2xl border shadow-2xl text-xs sm:text-sm font-medium transform transition-all duration-300 translate-y-4 opacity-0 ${styleClass}`;
+            el.innerHTML = `
+                <i data-lucide="${isError ? 'alert-circle' : 'check-circle-2'}" class="w-4 h-4 text-champagne shrink-0"></i>
+                <span>${text}</span>
             `;
-            container.appendChild(toast);
+            container.appendChild(el);
             lucide.createIcons();
 
+            requestAnimationFrame(() => {
+                el.classList.remove('translate-y-4', 'opacity-0');
+            });
+
             setTimeout(() => {
-                toast.style.opacity = '0';
-                toast.style.transform = 'translateY(10px)';
-                setTimeout(() => toast.remove(), 300);
-            }, 3000);
+                el.classList.add('translate-y-4', 'opacity-0');
+                setTimeout(() => el.remove(), 300);
+            }, 3500);
         }
 
-        function initCoverPersonalization() {
-            const params = new URLSearchParams(window.location.search);
-            const rawTo = params.get('to');
-            const nameEl = document.getElementById('cover-guest-name');
-            const badgeEl = document.getElementById('cover-guest-badge');
-
-            if (rawTo && rawTo.trim() !== '') {
-                const cleanName = rawTo.trim();
-                nameEl.textContent = cleanName;
-
-                const matchedGuest = VIP_GUESTS.find(
-                    g => g.name.toLowerCase() === cleanName.toLowerCase()
-                );
-                if (matchedGuest) {
-                    badgeEl.textContent = `VIP Guest • ${matchedGuest.category.toUpperCase()}`;
-                    const selectEl = document.getElementById('rsvp-guest-select');
-                    if (selectEl) selectEl.value = matchedGuest.name;
-                } else {
-                    badgeEl.textContent = 'Invited Guest';
-                }
-            } else {
-                nameEl.textContent = 'Tamu Spesial';
-                badgeEl.textContent = 'VIP Guest List';
-            }
-        }
-
-        function openInvitation() {
-            const cover = document.getElementById('cover-screen');
-            cover.classList.add('opened');
-            document.body.classList.remove('overflow-hidden');
-
-            if (typeof confetti === 'function') {
-                confetti({
-                    particleCount: 75,
-                    spread: 70,
-                    origin: { y: 0.6 },
-                    colors: ['#0F1E36', '#0A0A0A', '#FFFFFF', '#C5A059']
-                });
-                setTimeout(() => {
-                    confetti({
-                        particleCount: 45,
-                        angle: 60,
-                        spread: 55,
-                        origin: { x: 0.1 },
-                        colors: ['#0F1E36', '#C5A059', '#FFFFFF']
-                    });
-                    confetti({
-                        particleCount: 45,
-                        angle: 120,
-                        spread: 55,
-                        origin: { x: 0.9 },
-                        colors: ['#0A0A0A', '#C5A059', '#FFFFFF']
-                    });
-                }, 250);
-            }
-        }
-
+        // 2. PARTIKEL ELEGAN PADA HALAMAN SAMPUL (CANVAS)
         function initCoverParticles() {
             const canvas = document.getElementById('cover-particles');
             if (!canvas) return;
@@ -744,59 +720,123 @@
             let width = canvas.width = window.innerWidth;
             let height = canvas.height = window.innerHeight;
 
-            window.addEventListener('resize', () => {
-                width = canvas.width = window.innerWidth;
-                height = canvas.height = window.innerHeight;
-            });
-
-            const particles = Array.from({ length: 36 }, () => ({
+            const particles = Array.from({ length: 42 }, () => ({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                r: Math.random() * 2.2 + 0.6,
-                dx: (Math.random() - 0.5) * 0.35,
-                dy: (Math.random() - 0.5) * 0.35,
-                alpha: Math.random() * 0.5 + 0.15
+                r: Math.random() * 1.8 + 0.6,
+                vx: (Math.random() - 0.5) * 0.25,
+                vy: -Math.random() * 0.35 - 0.1,
+                alpha: Math.random() * 0.6 + 0.2,
+                isGold: Math.random() > 0.45
             }));
 
             function draw() {
                 ctx.clearRect(0, 0, width, height);
                 particles.forEach(p => {
-                    p.x += p.dx;
-                    p.y += p.dy;
-                    if (p.x < 0) p.x = width;
-                    if (p.x > width) p.x = 0;
-                    if (p.y < 0) p.y = height;
-                    if (p.y > height) p.y = 0;
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.y < -10) p.y = height + 10;
+                    if (p.x < -10) p.x = width + 10;
+                    if (p.x > width + 10) p.x = -10;
 
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(197, 160, 89, ${p.alpha})`;
+                    ctx.fillStyle = p.isGold
+                        ? `rgba(197, 160, 89, ${p.alpha})`
+                        : `rgba(255, 255, 255, ${p.alpha * 0.7})`;
                     ctx.fill();
                 });
                 requestAnimationFrame(draw);
             }
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
             draw();
         }
 
-        function startCountdown() {
-            const targetDate = new Date('2026-12-06T19:00:00+07:00').getTime();
+        // 3. PERSONALISASI PARAMETER URL (?to=NamaTamu) & BUKA UNDANGAN + KONFETI
+        function applyURLPersonalization() {
+            const params = new URLSearchParams(window.location.search);
+            const guestParam = params.get('to');
+            const coverNameEl = document.getElementById('cover-guest-name');
+            const coverBadgeEl = document.getElementById('cover-guest-badge');
+            const selectEl = document.getElementById('rsvp-guest-select');
 
-            function update() {
-                const now = new Date().getTime();
-                const diff = targetDate - now;
+            if (guestParam && guestParam.trim() !== '') {
+                const cleanName = guestParam.trim();
+                const found = VIP_GUESTS.find(g => g.name.toLowerCase() === cleanName.toLowerCase());
 
-                const daysEl = document.getElementById('cd-days');
-                const hoursEl = document.getElementById('cd-hours');
-                const minutesEl = document.getElementById('cd-minutes');
-                const secondsEl = document.getElementById('cd-seconds');
-                const captionEl = document.getElementById('cd-caption');
+                if (found) {
+                    coverNameEl.textContent = found.name;
+                    coverBadgeEl.textContent = `VIP • ${found.category}`;
+                    if (selectEl) {
+                        selectEl.value = found.name;
+                        prefillRSVPForm(found.name);
+                    }
+                } else {
+                    coverNameEl.textContent = cleanName;
+                    coverBadgeEl.textContent = 'Special Invited Guest';
+                }
+            }
+        }
+
+        function triggerElegantConfetti() {
+            if (typeof confetti !== 'function') return;
+            const colors = ['#0F1E36', '#14284B', '#0A0A0A', '#C5A059', '#FFFFFF'];
+            confetti({
+                particleCount: 75,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: colors
+            });
+            setTimeout(() => {
+                confetti({
+                    particleCount: 45,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colors
+                });
+                confetti({
+                    particleCount: 45,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colors
+                });
+            }, 250);
+        }
+
+        function openInvitation() {
+            const cover = document.getElementById('cover-screen');
+            cover.classList.add('opened');
+            document.body.classList.remove('overflow-hidden');
+            triggerElegantConfetti();
+        }
+
+        // 4. COUNTDOWN TIMER REAL-TIME (Minggu, 6 Desember 2026 pukul 19:00 WIB)
+        function initCountdown() {
+            const eventTime = new Date('2026-12-06T19:00:00+07:00').getTime();
+
+            function tick() {
+                const now = Date.now();
+                const diff = eventTime - now;
+
+                const dEl = document.getElementById('cd-days');
+                const hEl = document.getElementById('cd-hours');
+                const mEl = document.getElementById('cd-minutes');
+                const sEl = document.getElementById('cd-seconds');
+                const capEl = document.getElementById('cd-caption');
 
                 if (diff <= 0) {
-                    daysEl.textContent = '00';
-                    hoursEl.textContent = '00';
-                    minutesEl.textContent = '00';
-                    secondsEl.textContent = '00';
-                    captionEl.textContent = 'Perayaan Sedang Berlangsung • Kopikina Kemang';
+                    dEl.textContent = '00';
+                    hEl.textContent = '00';
+                    mEl.textContent = '00';
+                    sEl.textContent = '00';
+                    capEl.textContent = 'Perayaan Ulang Tahun ke-19 Cezra sedang berlangsung di Kopikina Kemang!';
                     return;
                 }
 
@@ -805,146 +845,19 @@
                 const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-                daysEl.textContent = String(days).padStart(2, '0');
-                hoursEl.textContent = String(hours).padStart(2, '0');
-                minutesEl.textContent = String(minutes).padStart(2, '0');
-                secondsEl.textContent = String(seconds).padStart(2, '0');
+                dEl.textContent = String(days).padStart(2, '0');
+                hEl.textContent = String(hours).padStart(2, '0');
+                mEl.textContent = String(minutes).padStart(2, '0');
+                sEl.textContent = String(seconds).padStart(2, '0');
             }
 
-            update();
-            setInterval(update, 1000);
+            tick();
+            setInterval(tick, 1000);
         }
 
-        function getPersonalInviteUrl(guestName) {
-            const baseUrl = `${window.location.origin}${window.location.pathname}`;
-            return `${baseUrl}?to=${encodeURIComponent(guestName)}`;
-        }
-
-        function getInviteShareText(guestName) {
-            const url = getPersonalInviteUrl(guestName);
-            return `Halo ${guestName}! Kamu diundang ke perayaan ulang tahun ke-19 Cezra Davino Putra Prakoso (The 19th Chapter).\n\nHari/Tanggal: Minggu, 6 Desember 2026\nWaktu: 19.00 WIB – Selesai\nLokasi: Kopikina Kemang\nDress Code: Baju Navy & Celana Hitam\n\nBuka undangan personalmu di sini:\n${url}`;
-        }
-
-        function copyGuestInviteLink(guestName) {
-            const text = getInviteShareText(guestName);
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(text).then(() => {
-                    showToast(`Undangan & link untuk ${guestName} disalin!`);
-                }).catch(() => fallbackCopy(text, guestName));
-            } else {
-                fallbackCopy(text, guestName);
-            }
-        }
-
-        function fallbackCopy(text, guestName) {
-            const temp = document.createElement('textarea');
-            temp.value = text;
-            document.body.appendChild(temp);
-            temp.select();
-            document.execCommand('copy');
-            document.body.removeChild(temp);
-            showToast(`Undangan & link untuk ${guestName} disalin!`);
-        }
-
-        function shareGuestWhatsApp(guestName) {
-            const text = encodeURIComponent(getInviteShareText(guestName));
-            window.open(`https://wa.me/?text=${text}`, '_blank', 'noopener,noreferrer');
-        }
-
-        function setGuestCategory(category) {
-            currentCategory = category;
-            ['Semua', 'Friends', 'Family'].forEach(cat => {
-                const btn = document.getElementById(`filter-${cat}`);
-                if (!btn) return;
-                if (cat === category) {
-                    btn.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-navyDeep text-pure transition-all cursor-pointer';
-                } else {
-                    btn.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-pure text-slate-600 border border-slate-200 hover:border-navyDeep transition-all cursor-pointer';
-                }
-            });
-            renderGuestDirectory();
-        }
-
-        function renderGuestDirectory() {
-            const listContainer = document.getElementById('guest-directory-list');
-            const query = (document.getElementById('guest-search-input')?.value || '').trim().toLowerCase();
-
-            const filtered = VIP_GUESTS.filter(g => {
-                const matchCat = currentCategory === 'Semua' || g.category === currentCategory;
-                const matchQuery = !query || g.name.toLowerCase().includes(query);
-                return matchCat && matchQuery;
-            });
-
-            if (filtered.length === 0) {
-                listContainer.innerHTML = `
-                    <div class="text-center py-10 text-slate-400 text-sm">
-                        Nama tamu tidak ditemukan pada daftar VIP.
-                    </div>
-                `;
-                return;
-            }
-
-            const categoriesToRender = currentCategory === 'Semua' ? ['Friends', 'Family'] : [currentCategory];
-            let html = '';
-
-            categoriesToRender.forEach(cat => {
-                const items = filtered.filter(g => g.category === cat);
-                if (items.length === 0) return;
-
-                html += `
-                    <div>
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-bold uppercase tracking-[0.2em] text-navyDeep">${cat}</span>
-                            <span class="text-[11px] text-slate-400 font-medium">${items.length} orang</span>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                `;
-
-                items.forEach(guest => {
-                    const status = rsvpData[guest.name];
-                    let badgeHtml = `<span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-200/80 text-slate-600">Menunggu</span>`;
-                    if (status === 'Hadir') {
-                        badgeHtml = `<span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">Hadir</span>`;
-                    } else if (status === 'Tidak Hadir') {
-                        badgeHtml = `<span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-rose-100 text-rose-700">Tidak Hadir</span>`;
-                    }
-
-                    const safeName = guest.name.replace(/'/g, "\\'");
-
-                    html += `
-                        <div class="bg-pure rounded-2xl p-3.5 border border-slate-200/80 hover:border-navyDeep/40 transition-all flex items-center justify-between gap-2">
-                            <div class="min-w-0">
-                                <button onclick="selectGuestForRSVP('${safeName}')" class="font-semibold text-sm text-obsidian hover:text-navyDeep truncate block text-left cursor-pointer" title="Pilih untuk RSVP">
-                                    ${guest.name}
-                                </button>
-                                <div class="mt-1">${badgeHtml}</div>
-                            </div>
-                            <div class="flex items-center gap-1.5 shrink-0">
-                                <button onclick="copyGuestInviteLink('${safeName}')" class="p-2 rounded-xl bg-alabaster hover:bg-navyDeep text-slate-600 hover:text-pure border border-slate-200 transition-colors cursor-pointer" title="Salin Link Undangan ${guest.name}">
-                                    <i data-lucide="link" class="w-3.5 h-3.5"></i>
-                                </button>
-                                <button onclick="shareGuestWhatsApp('${safeName}')" class="p-2 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-pure border border-emerald-200 transition-colors cursor-pointer" title="Kirim via WhatsApp ke ${guest.name}">
-                                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                });
-
-                html += `</div></div>`;
-            });
-
-            listContainer.innerHTML = html;
-            lucide.createIcons();
-        }
-
-        function populateGuestSelects() {
-            const rsvpSelect = document.getElementById('rsvp-guest-select');
-            const modalSelect = document.getElementById('modal-guest-select');
-
-            const customOption = rsvpSelect.querySelector('option[value="__CUSTOM__"]');
-            rsvpSelect.innerHTML = '<option value="" disabled selected>-- Pilih nama dari daftar VIP --</option>';
-
+        // 5. DAFTAR TAMU VIP, PENCARIAN & RSVP
+        function populateRSVPSelect() {
+            const selectEl = document.getElementById('rsvp-guest-select');
             const friendsGroup = document.createElement('optgroup');
             friendsGroup.label = 'FRIENDS (25)';
             const familyGroup = document.createElement('optgroup');
@@ -953,199 +866,295 @@
             VIP_GUESTS.forEach(g => {
                 const opt = document.createElement('option');
                 opt.value = g.name;
-                opt.textContent = g.name;
-                if (g.category === 'Friends') friendsGroup.appendChild(opt);
-                else familyGroup.appendChild(opt);
-            });
-
-            rsvpSelect.appendChild(friendsGroup);
-            rsvpSelect.appendChild(familyGroup);
-            if (customOption) rsvpSelect.appendChild(customOption);
-
-            modalSelect.innerHTML = '';
-            const mFriends = document.createElement('optgroup');
-            mFriends.label = 'FRIENDS (25)';
-            const mFamily = document.createElement('optgroup');
-            mFamily.label = 'FAMILY (7)';
-
-            VIP_GUESTS.forEach(g => {
-                const opt = document.createElement('option');
-                opt.value = g.name;
-                opt.textContent = g.name;
-                if (g.category === 'Friends') mFriends.appendChild(opt);
-                else mFamily.appendChild(opt);
-            });
-
-            modalSelect.appendChild(mFriends);
-            modalSelect.appendChild(mFamily);
-
-            rsvpSelect.addEventListener('change', () => {
-                const wrapper = document.getElementById('custom-name-wrapper');
-                const customInput = document.getElementById('rsvp-custom-name');
-                if (rsvpSelect.value === '__CUSTOM__') {
-                    wrapper.classList.remove('hidden');
-                    customInput.required = true;
+                opt.textContent = `${g.name} — ${g.category}`;
+                if (g.category === 'Friends') {
+                    friendsGroup.appendChild(opt);
                 } else {
-                    wrapper.classList.add('hidden');
-                    customInput.required = false;
+                    familyGroup.appendChild(opt);
                 }
             });
 
-            updateModalLinkPreview();
+            selectEl.appendChild(friendsGroup);
+            selectEl.appendChild(familyGroup);
+
+            selectEl.addEventListener('change', (e) => {
+                prefillRSVPForm(e.target.value);
+            });
         }
 
-        function selectGuestForRSVP(name) {
+        function prefillRSVPForm(guestName) {
+            const existing = rsvpStore[guestName];
+            const msgInput = document.getElementById('rsvp-message');
+            if (existing) {
+                const radio = document.querySelector(`input[name="rsvp_status"][value="${existing.status}"]`);
+                if (radio) radio.checked = true;
+                msgInput.value = existing.message || '';
+            } else {
+                msgInput.value = '';
+            }
+        }
+
+        function setGuestCategory(cat) {
+            activeCategory = cat;
+            ['Semua', 'Friends', 'Family'].forEach(item => {
+                const btn = document.getElementById(`filter-${item}`);
+                if (item === cat) {
+                    btn.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-obsidian text-pure transition-all cursor-pointer';
+                } else {
+                    btn.className = 'px-4 py-1.5 rounded-full text-xs font-semibold bg-pure text-slate-600 border border-slate-200 hover:border-obsidian transition-all cursor-pointer';
+                }
+            });
+            renderGuestDirectory();
+        }
+
+        function selectGuestFromDirectory(name) {
             const selectEl = document.getElementById('rsvp-guest-select');
             selectEl.value = name;
-            document.getElementById('custom-name-wrapper').classList.add('hidden');
-            document.getElementById('rsvp-custom-name').required = false;
-            showToast(`${name} dipilih pada form RSVP`);
+            prefillRSVPForm(name);
+            selectEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            showToast(`Tamu "${name}" dipilih untuk konfirmasi RSVP.`);
+        }
+
+        function renderGuestDirectory() {
+            const container = document.getElementById('guest-directory-list');
+            const query = document.getElementById('guest-search-input').value.toLowerCase().trim();
+            container.innerHTML = '';
+
+            const categories = activeCategory === 'Semua' ? ['Friends', 'Family'] : [activeCategory];
+            let foundAny = false;
+
+            categories.forEach(cat => {
+                const list = VIP_GUESTS.filter(g =>
+                    g.category === cat && g.name.toLowerCase().includes(query)
+                );
+
+                if (list.length > 0) {
+                    foundAny = true;
+                    const block = document.createElement('div');
+                    block.innerHTML = `
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-obsidian">${cat}</span>
+                            <span class="text-[11px] text-slate-400">${list.length} Tamu</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            ${list.map(guest => {
+                                const rec = rsvpStore[guest.name];
+                                let badge = `<span class="text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 font-medium">Menunggu</span>`;
+                                if (rec) {
+                                    badge = rec.status === 'Hadir'
+                                        ? `<span class="text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-semibold">✓ Hadir</span>`
+                                        : `<span class="text-[10px] px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 font-semibold">✕ Tidak Hadir</span>`;
+                                }
+                                return `
+                                    <div onclick="selectGuestFromDirectory('${guest.name}')" class="p-3 rounded-2xl bg-pure border border-slate-200/80 hover:border-obsidian transition-all cursor-pointer flex items-center justify-between gap-2 group">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <span class="w-7 h-7 rounded-full bg-obsidian text-champagne text-xs font-serif font-bold flex items-center justify-center shrink-0">
+                                                ${guest.name.charAt(0).toUpperCase()}
+                                            </span>
+                                            <span class="text-sm font-medium text-obsidian truncate group-hover:text-champagne transition-colors">${guest.name}</span>
+                                        </div>
+                                        <div class="shrink-0">${badge}</div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    `;
+                    container.appendChild(block);
+                }
+            });
+
+            if (!foundAny) {
+                container.innerHTML = `
+                    <div class="text-center py-10 text-slate-400 text-sm">
+                        Tidak ada nama tamu yang cocok dengan pencarian "${escapeHTML(query)}".
+                    </div>
+                `;
+            }
+
+            updateStats();
         }
 
         function updateStats() {
-            let hadir = 0;
-            let tidak = 0;
-            Object.values(rsvpData).forEach(st => {
-                if (st === 'Hadir') hadir++;
-                else if (st === 'Tidak Hadir') tidak++;
-            });
+            const entries = Object.values(rsvpStore);
+            const hadir = entries.filter(e => e.status === 'Hadir').length;
+            const tidak = entries.filter(e => e.status === 'Tidak Hadir').length;
 
             document.getElementById('stat-total').textContent = VIP_GUESTS.length;
             document.getElementById('stat-hadir').textContent = hadir;
             document.getElementById('stat-tidak').textContent = tidak;
         }
 
-        function renderWishes() {
-            const wall = document.getElementById('wishes-wall');
-            const badge = document.getElementById('wishes-count-badge');
-            badge.textContent = `${wishesData.length} Ucapan`;
-
-            if (wishesData.length === 0) {
-                wall.innerHTML = `
-                    <div class="col-span-full text-center py-10 bg-alabaster rounded-2xl border border-slate-200/80 text-slate-400 text-sm">
-                        Belum ada ucapan. Jadilah yang pertama mengirimkan ucapan untuk Cezra!
-                    </div>
-                `;
-                return;
-            }
-
-            wall.innerHTML = wishesData.map(w => {
-                const statusColor = w.status === 'Hadir'
-                    ? 'bg-emerald-100 text-emerald-700'
-                    : 'bg-rose-100 text-rose-700';
-
-                return `
-                    <div class="bg-alabaster rounded-2xl p-5 border border-slate-200/80 flex flex-col justify-between shadow-sm">
-                        <div>
-                            <div class="flex items-start justify-between gap-2 mb-3">
-                                <div>
-                                    <h4 class="font-serif font-bold text-base text-obsidian">${escapeHtml(w.name)}</h4>
-                                    <span class="text-[11px] text-slate-400 font-medium">${escapeHtml(w.category || 'Guest')}</span>
-                                </div>
-                                <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full ${statusColor}">${escapeHtml(w.status)}</span>
-                            </div>
-                            <p class="text-sm text-slate-600 leading-relaxed">${escapeHtml(w.message || 'Selamat ulang tahun ke-19 Cezra!')}</p>
-                        </div>
-                        <p class="text-[10px] text-slate-400 mt-4 pt-3 border-t border-slate-200/60">${escapeHtml(w.time)}</p>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function escapeHtml(str) {
-            return String(str)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#039;');
-        }
-
         function handleRSVPSubmit(e) {
             e.preventDefault();
-            const selectVal = document.getElementById('rsvp-guest-select').value;
-            const customName = document.getElementById('rsvp-custom-name').value.trim();
-            const status = document.querySelector('input[name="rsvp_status"]:checked').value;
+            const name = document.getElementById('rsvp-guest-select').value;
+            const statusInput = document.querySelector('input[name="rsvp_status"]:checked');
             const message = document.getElementById('rsvp-message').value.trim();
 
-            const finalName = selectVal === '__CUSTOM__' ? customName : selectVal;
-            if (!finalName) {
-                showToast('Silakan pilih atau isi nama terlebih dahulu.', 'error');
+            if (!name || !statusInput || !message) {
+                showToast('Harap pilih nama, status kehadiran, dan isi pesan ucapan.', true);
                 return;
             }
 
-            const matched = VIP_GUESTS.find(g => g.name.toLowerCase() === finalName.toLowerCase());
-            const categoryLabel = matched ? matched.category : 'Guest';
+            const guestInfo = VIP_GUESTS.find(g => g.name === name);
+            rsvpStore[name] = {
+                name: name,
+                category: guestInfo ? guestInfo.category : 'VIP',
+                status: statusInput.value,
+                message: message,
+                createdAt: new Date().toISOString()
+            };
 
-            rsvpData[finalName] = status;
-            localStorage.setItem(STORAGE_RSVP_KEY, JSON.stringify(rsvpData));
-
-            const nowStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }) + ' WIB';
-            wishesData.unshift({
-                id: 'wish-' + Date.now(),
-                name: finalName,
-                category: categoryLabel,
-                status: status,
-                message: message || (status === 'Hadir' ? 'Hadir merayakan ulang tahun ke-19 Cezra!' : 'Turut mendoakan yang terbaik untuk Cezra!'),
-                time: `Hari ini • ${nowStr}`
-            });
-            localStorage.setItem(STORAGE_WISHES_KEY, JSON.stringify(wishesData));
-
-            updateStats();
+            saveStore();
             renderGuestDirectory();
-            renderWishes();
-
+            renderWishesFeed();
             document.getElementById('rsvp-message').value = '';
-            if (selectVal === '__CUSTOM__') {
-                document.getElementById('rsvp-custom-name').value = '';
+            showToast(`Terima kasih ${name}! Konfirmasi (${statusInput.value}) dan ucapan Anda telah tersimpan.`);
+
+            if (statusInput.value === 'Hadir') {
+                triggerElegantConfetti();
+            }
+        }
+
+        function renderWishesFeed() {
+            const feed = document.getElementById('wishes-feed');
+            const counter = document.getElementById('wishes-counter');
+            const items = Object.values(rsvpStore).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+            counter.textContent = `${items.length} Ucapan`;
+            feed.innerHTML = '';
+
+            if (items.length === 0) {
+                feed.innerHTML = `<p class="col-span-full text-center text-slate-400 text-sm py-8">Belum ada ucapan yang masuk.</p>`;
+                return;
             }
 
-            showToast(`Terima kasih ${finalName}, konfirmasi (${status}) & ucapan tersimpan!`);
+            items.forEach(item => {
+                const isHadir = item.status === 'Hadir';
+                const statusBadge = isHadir
+                    ? 'bg-emerald-100 text-emerald-800'
+                    : 'bg-rose-100 text-rose-800';
+
+                const card = document.createElement('div');
+                card.className = 'bg-alabaster rounded-2xl p-5 border border-slate-200/80 flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-3">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-9 h-9 rounded-full bg-obsidian text-champagne font-serif font-bold flex items-center justify-center text-sm">
+                                    ${item.name.charAt(0).toUpperCase()}
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-obsidian text-sm">${escapeHTML(item.name)}</h4>
+                                    <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">${item.category}</span>
+                                </div>
+                            </div>
+                            <span class="text-[10px] px-2.5 py-0.5 rounded-full font-semibold ${statusBadge}">
+                                ${item.status}
+                            </span>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed italic">"${escapeHTML(item.message)}"</p>
+                    </div>
+                `;
+                feed.appendChild(card);
+            });
         }
 
-        function openShareModal() {
-            const modal = document.getElementById('share-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            updateModalLinkPreview();
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag]));
+        }
+
+        // 6. GENERATOR LINK PERSONAL & WHATSAPP SHARE (MODAL + INLINE)
+        function buildPersonalURL(guestName) {
+            const cleanBase = window.location.href.split('?')[0];
+            return `${cleanBase}?to=${encodeURIComponent(guestName)}`;
+        }
+
+        function copyPersonalInvitation(guestName) {
+            const url = buildPersonalURL(guestName);
+            const textToCopy = `Halo ${guestName}! Kamu diundang ke acara ulang tahun ke-19 Cezra Davino Putra Prakoso.\n\nHari/Tanggal: Minggu, 6 Desember 2026\nWaktu: Pukul 19.00 WIB - selesai\nLokasi: Kopikina Kemang\nDress Code: Baju Navy (Biru Dongker) & Celana Hitam\n\nBuka undangan digital & konfirmasi kehadiranmu melalui link berikut:\n${url}`;
+
+            const tempArea = document.createElement('textarea');
+            tempArea.value = textToCopy;
+            document.body.appendChild(tempArea);
+            tempArea.select();
+            try {
+                document.execCommand('copy');
+                showToast(`Link & pesan undangan untuk "${guestName}" berhasil disalin!`);
+            } catch (e) {
+                showToast('Gagal menyalin link undangan.', true);
+            }
+            document.body.removeChild(tempArea);
+        }
+
+        function sendWhatsAppInvitation(guestName) {
+            const url = buildPersonalURL(guestName);
+            const waText = `Halo *${guestName}*! ✨\n\nKamu diundang secara khusus ke perayaan ulang tahun ke-19 *Cezra Davino Putra Prakoso*.\n\n📅 *Minggu, 6 Desember 2026*\n🕖 *Pukul 19.00 WIB – selesai*\n📍 *Kopikina Kemang*\n👔 *Dress Code:* Baju Navy (Biru Dongker) & Celana Hitam\n\nBuka undangan digital personal kamu dan isi konfirmasi kehadiran (RSVP) melalui tautan ini:\n${url}\n\nDitunggu kehadirannya! 💙🖤`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(waText)}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function renderShareGrid(containerId, searchInputId) {
+            const container = document.getElementById(containerId);
+            const searchInput = document.getElementById(searchInputId);
+            if (!container) return;
+
+            const q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            const filtered = VIP_GUESTS.filter(g => g.name.toLowerCase().includes(q));
+
+            container.innerHTML = filtered.map(guest => `
+                <div class="p-3.5 rounded-2xl bg-pure border border-slate-200 hover:border-obsidian transition-colors flex items-center justify-between gap-2">
+                    <div class="min-w-0">
+                        <p class="font-semibold text-sm text-obsidian truncate">${guest.name}</p>
+                        <span class="text-[10px] uppercase tracking-widest text-champagne font-bold">${guest.category}</span>
+                    </div>
+                    <div class="flex items-center gap-1.5 shrink-0">
+                        <button onclick="copyPersonalInvitation('${guest.name}')" title="Salin Link & Pesan Undangan" class="p-2 rounded-xl bg-alabaster border border-slate-200 text-obsidian hover:bg-obsidian hover:text-pure transition-colors cursor-pointer">
+                            <i data-lucide="copy" class="w-4 h-4"></i>
+                        </button>
+                        <button onclick="sendWhatsAppInvitation('${guest.name}')" title="Kirim via WhatsApp" class="px-3 py-2 rounded-xl bg-obsidian text-pure text-xs font-semibold hover:bg-champagne hover:text-obsidian transition-colors flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                            <span>WA</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
             lucide.createIcons();
         }
 
-        function closeShareModal() {
+        function toggleShareModal(show) {
             const modal = document.getElementById('share-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+            if (show) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                renderShareGrid('share-grid-modal', 'share-search-modal');
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
         }
 
-        function updateModalLinkPreview() {
-            const guestName = document.getElementById('modal-guest-select').value || 'Ari';
-            document.getElementById('modal-link-preview').value = getPersonalInviteUrl(guestName);
-        }
-
-        function copyModalLink() {
-            const guestName = document.getElementById('modal-guest-select').value || 'Ari';
-            copyGuestInviteLink(guestName);
-        }
-
-        function shareModalWhatsApp() {
-            const guestName = document.getElementById('modal-guest-select').value || 'Ari';
-            shareGuestWhatsApp(guestName);
-        }
-
-        document.getElementById('share-modal').addEventListener('click', function(e) {
-            if (e.target === this) closeShareModal();
+        // Tutup modal jika klik area luar
+        document.getElementById('share-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'share-modal') toggleShareModal(false);
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            loadSavedData();
-            populateGuestSelects();
-            initCoverPersonalization();
-            initCoverParticles();
-            startCountdown();
-            updateStats();
+        // INITIALIZE ON LOAD
+        window.addEventListener('DOMContentLoaded', () => {
+            loadStore();
+            populateRSVPSelect();
+            applyURLPersonalization();
             renderGuestDirectory();
-            renderWishes();
+            renderWishesFeed();
+            renderShareGrid('share-grid-inline', 'share-search-inline');
+            initCountdown();
+            initCoverParticles();
+            lucide.createIcons();
         });
     </script>
 </body>
